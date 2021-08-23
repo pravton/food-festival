@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-module.exports = {
+module.exports = {  
   entry: {
     app: './assets/js/script.js',
     events: './assets/js/events.js',
@@ -46,5 +46,9 @@ module.exports = {
       analyzerMode: 'static',
     })
   ],
-  mode: 'development'
+  mode: 'development',
+  devServer: {
+    static: __dirname,
+  },
 };
+
